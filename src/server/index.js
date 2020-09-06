@@ -1,8 +1,18 @@
+//require("dotenv").config({ path: __dirname + "/./../../.env" });
+console.log("Hallo Annika");
+//console.log(process.env.API_KEY);
+//console.log(__dirname);
+
+/*
 var path = require("path");
 const express = require("express");
 const mockAPIResponse = require("./mockAPI.js");
-const dotenv = require("dotenv");
-dotenv.config();
+//require("dotenv").config({ path: "../../.env" });
+//const dotenv = require("dotenv");
+//dotenv.config();
+
+//console.log(`Your API key is ${process.env.API_KEY}`);
+//console.log("You suck");
 
 const app = express();
 
@@ -29,3 +39,4 @@ app.get("/test", function (req, res) {
 //   application_key: process.env.API_KEY,
 // });
 console.log(`Your API key is ${process.env.API_KEY}`);
+*/

@@ -1,5 +1,14 @@
+function nlp(event) {
+  var apiKey = process.env.API_KEY;
+  console.log("npl-function ausgeführt");
+  console.log("API-KEY is " + apiKey);
+}
+
+export { nlp };
+
+/*
 var your_api_key = process.env.API_KEY;
-var url = '';
+//var url = '';
 
 var https = require('follow-redirects').https;
   var fs = require('fs');
@@ -33,3 +42,4 @@ const { url } = require('inspector');
   });
 
   req.end();
+  */
