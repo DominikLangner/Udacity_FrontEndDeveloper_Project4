@@ -24,9 +24,8 @@ app.get("/test", function (req, res) {
   res.send(mockAPIResponse);
 });
 
-// Aylien API:
-var textapi = new aylien({
-  application_id: "your-api-id",
-  application_key: process.env.API_KEY,
-});
+// Meaningcloud API:
+// var textapi = new aylien({
+//   application_key: process.env.API_KEY,
+// });
 console.log(`Your API key is ${process.env.API_KEY}`);

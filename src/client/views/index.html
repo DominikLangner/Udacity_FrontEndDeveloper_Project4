@@ -14,18 +14,20 @@
 
         <header>
             <div class="">
-                Logo
+                <strong>Natural Language Processing (NLP) - Sentiment Analysis</strong>
+                <br>using meaningcloud.com's API
             </div>
-            <div class="">
-                navigation
-            </div>
+            <br>
+            
         </header>
 
         <main>
+            <p>Please enter the URL of an article or blog post you want to anaylze with natural language sentiment analysis:</p>
+
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="www.url.com">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
