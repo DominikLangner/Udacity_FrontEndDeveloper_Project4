@@ -1,0 +1,25 @@
+Project Instructions
+
+This Github repository is your starter code for the project:
+https://github.com/udacity/fend/tree/refresh-2019
+
+ Clone the specific branch 'refresh-2019' or download the ZIP file, although feel free to start from scratch! It is the same as the starter code we began with in Lesson 2. 
+ Install and configure Webpack just as we did in the course. Feel free to refer to the course repo as you build this one, and remember to make frequent commits and to create and merge branches as necessary!
+
+The goal of this project is to give you practice with:
+
+Setting up Webpack
+Sass styles
+Webpack Loaders and Plugins
+Creating layouts and page design
+Service workers
+Using APIs and creating requests to external URLs
+We have divided the instructions into the following stages, as explained below:
+
+Stage 1 - Getting Started - Setting up the Project
+It would be good to first get your basic project up and functioning. Fork the project Github repo, and then clone or download the zip file locally. Remember that once you clone, you will still need to install everything:
+cd <project directory>
+npm install
+
+Follow the steps from the course up to Lesson 4, but do not add Service Workers just yet. We won't need the service workers during development, and having extra caches floating around just means there's more potential for confusion. Just for your quick reference, we installed the following loaders and plugins so far:
+
