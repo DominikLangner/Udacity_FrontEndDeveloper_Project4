@@ -2,3 +2,5 @@ node_modules
 dist
 .env
 How-to_project
+API-CALL
+.env-INFO
