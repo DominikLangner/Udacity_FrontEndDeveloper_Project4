@@ -26,9 +26,11 @@ app.listen(8081, function () {
   console.log("Example app listening on port 8081!");
 });
 
-app.get("/test", function (req, res) {
+app.post("/test", function (req, res) {
+  console.log(req.body);
   getSentiment(
-    "https://www.cookingisajourney.com/post/khai-jiao-pu-krabben-omelette/"
+    //"https://www.cookingisajourney.com/post/khai-jiao-pu-krabben-omelette/"
+    req.body.url
   ).then((sentimentApiData) => {
     console.log(sentimentApiData);
     let answer = `The sentiment analysis was completed. The results are with ${sentimentApiData.confidence}% confidence:
@@ -65,3 +67,16 @@ const getSentiment = async (url) => {
     console.log("error", error);
   }
 };
+
+//////////////////////////////////////////////////////////////////////////////
+// TRYING to get URL from  client to server-side:
+// EXAMPLE
+const data = [];
+//create post() with a url path and a callback function:
+app.post("/addUrl", addUrl);
+
+function addUrl(req, res) {
+  data.push(req.body);
+  // console.log(req.body);
+  console.log(data);
+}

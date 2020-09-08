@@ -9,8 +9,9 @@
 
         <header>
             <div class="">
-                <strong>Natural Language Processing (NLP) - Sentiment Analysis</strong>
-                <br>using meaningcloud.com's API
+             <h1>Natural Language Processing (NLP) <br>
+                - Sentiment Analysis - <br></h1>  
+              <h2>using meaningcloud.com's API</h2> 
             </div>
             <br>
             
@@ -27,12 +28,20 @@
             <section>
 
             <section>
-                <br>
-                <strong>Sentiment Analysis Results:</strong>
+               <h2>Sentiment Analysis Results:</h2>
                 <div id="results"></div>
             </section>
         </main>
 
-
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
+           
     </body>
 </html>

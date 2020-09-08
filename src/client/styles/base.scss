@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  text-align: center;
+  justify-content: center;
+  p {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  form {
+    margin: auto;
+    background-color: rgb(190, 190, 190);
+  }
+  h2 {
+    font-weight: bold;
+    margin: 20px;
+  }
+  #results {
+    margin: 0 20%;
+    font-family: monospace;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8em;
+    text-align: left;
+  }
+}

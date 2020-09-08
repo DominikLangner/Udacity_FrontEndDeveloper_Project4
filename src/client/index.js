@@ -1,12 +1,10 @@
 import { checkValidUrl } from "./js/urlChecker";
 import { handleSubmit } from "./js/formHandler";
-//require("dotenv").config({ path: "../.env" });
-//require("dotenv").config();
 
-//console.log(checkForName);
-//console.log(process.env.API_KEY);
-
-//alert("I EXIST");
-//console.log("CHANGE!!");
+import "./styles/resets.scss";
+import "./styles/base.scss";
+import "./styles/form.scss";
+import "./styles/footer.scss";
+import "./styles/header.scss";
 
 export { checkValidUrl, handleSubmit };
