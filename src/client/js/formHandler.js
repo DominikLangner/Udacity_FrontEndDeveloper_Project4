@@ -24,10 +24,9 @@ const postData = async (url = "", data = {}) => {
 
 function createAnswerText(apiData) {
   return `The sentiment analysis was completed. The results are with ${apiData.confidence}% confidence:
-    Agreement: ${apiData.agreement}
-    Subjectivity: ${apiData.subjectivity}
-    Irony: ${apiData.irony} 
-    `;
+  Agreement: ${apiData.agreement}
+  Subjectivity: ${apiData.subjectivity}
+  Irony: ${apiData.irony}`;
 }
 
 function handleSubmit(event) {
@@ -53,3 +52,4 @@ function handleSubmit(event) {
   }
 }
 export { handleSubmit };
+export { createAnswerText };
