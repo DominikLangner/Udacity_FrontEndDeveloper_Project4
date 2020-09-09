@@ -33,11 +33,13 @@ app.post("/test", function (req, res) {
     req.body.url
   ).then((sentimentApiData) => {
     console.log(sentimentApiData);
-    let answer = `The sentiment analysis was completed. The results are with ${sentimentApiData.confidence}% confidence:
-    Agreement: ${sentimentApiData.agreement}
-    Subjectivity: ${sentimentApiData.subjectivity}
-    Irony: ${sentimentApiData.irony} 
-    `;
+    let answer = {
+      confidence: sentimentApiData.confidence,
+      agreement: sentimentApiData.agreement,
+      subjectivity: sentimentApiData.subjectivity,
+      irony: sentimentApiData.irony,
+    };
+
     console.log(answer);
     res.send(answer);
     // res.send(sentimentApiData);

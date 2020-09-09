@@ -1,4 +1,5 @@
 //// adding part to sent URL to server
+
 const postData = async (url = "", data = {}) => {
   console.log(data);
   const response = await fetch(url, {
@@ -12,8 +13,8 @@ const postData = async (url = "", data = {}) => {
   });
 
   try {
-    const newData = await response.text();
-    console.log(newData);
+    const newData = await response.json();
+    //console.log(newData);
     return newData;
   } catch (error) {
     console.log("error", error);
@@ -21,12 +22,19 @@ const postData = async (url = "", data = {}) => {
   }
 };
 
+function createAnswerText(apiData) {
+  return `The sentiment analysis was completed. The results are with ${apiData.confidence}% confidence:
+    Agreement: ${apiData.agreement}
+    Subjectivity: ${apiData.subjectivity}
+    Irony: ${apiData.irony} 
+    `;
+}
+
 function handleSubmit(event) {
   event.preventDefault();
 
   // check what text was put into the form field
   let formText = document.getElementById("url").value;
-  console.log(url);
 
   let validUrl = Client.checkValidUrl(formText);
   console.log(validUrl);
@@ -36,9 +44,10 @@ function handleSubmit(event) {
     postData("http://localhost:8081/test", { url: formText })
       //fetch("http://localhost:8081/test")
       // .then((res) => res.text())
-      //  .then((res) => res.json())
+      // .then((res) => res.json())
       .then(function (res) {
-        document.getElementById("results").innerText = res;
+        let textanswer = createAnswerText(res);
+        document.getElementById("results").innerText = textanswer;
         console.log(res);
       });
   }

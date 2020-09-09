@@ -8,17 +8,9 @@ function checkValidUrl(inputText) {
     return true;
   } else {
     console.log("--> URL invalid");
-    alert("Invalid URL: Please check your URL");
+    //alert("Invalid URL: Please check your URL");
     return false;
   }
 }
-
-/*
-  let names = ["Picard", "Janeway", "Kirk", "Archer", "Georgiou"];
-
-  if (names.includes(inputText)) {
-    alert("Welcome, Captain!");
-  }
-  */
 
 export { checkValidUrl };
